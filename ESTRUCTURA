@@ -1,0 +1,35 @@
+empleados-departamentos-crud/
+│
+├── database/
+│   └── empleados_departamentos.sql
+│
+├── app/
+│   ├── config/
+│   │   └── database.php
+│   ├── controllers/
+│   │   ├── DepartmentController.php
+│   │   └── EmployeeController.php
+│   ├── models/
+│   │   ├── Department.php
+│   │   └── Employee.php
+│   └── views/
+│       ├── departments/
+│       │   ├── index.php
+│       │   ├── create.php
+│       │   ├── edit.php
+│       │   └── show.php
+│       └── employees/
+│           ├── index.php
+│           ├── create.php
+│           ├── edit.php
+│           └── show.php
+│
+├── public/
+│   └── assets/
+│       └── css/
+│           └── style.css
+│
+├── .htaccess
+├── index.php
+├── README.md
+└── composer.json
