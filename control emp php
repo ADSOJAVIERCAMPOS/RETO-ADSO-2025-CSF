@@ -1,0 +1,16 @@
+<?php
+class EmployeeController {
+    private $model;
+
+    public function __construct($db) {
+        $this->model = new Employee($db);
+    }
+
+    public function index() {
+        $employees = $this->model->read();
+        include '../app/views/employees/index.php';
+    }
+
+    // Resto de métodos CRUD...
+}
+?>
