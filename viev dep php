@@ -1,0 +1,23 @@
+<!-- Tabla HTML con lista de departamentos -->
+<table>
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
+        <tr>
+            <td><?= $row['departamento_codigo'] ?></td>
+            <td><?= $row['departamento_nombre'] ?></td>
+            <td>
+                <a href="departamentos/show/<?= $row['id'] ?>">Ver</a>
+                <a href="departamentos/edit/<?= $row['id'] ?>">Editar</a>
+                <a href="departamentos/delete/<?= $row['id'] ?>">Eliminar</a>
+            </td>
+        </tr>
+        <?php endwhile; ?>
+    </tbody>
+</table>
