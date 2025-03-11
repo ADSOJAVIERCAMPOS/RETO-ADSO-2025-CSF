@@ -1,0 +1,25 @@
+<?php
+class Department {
+    private $conn;
+    private $table = 'departamentos';
+
+    public $id;
+    public $codigo;
+    public $nombre;
+    public $fecha_crea;
+    public $fecha_modifica;
+
+    public function __construct($db) {
+        $this->conn = $db;
+    }
+
+    public function read() {
+        $query = "SELECT * FROM " . $this->table;
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        return $stmt;
+    }
+
+    // Resto de métodos CRUD...
+}
+?>
